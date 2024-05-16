@@ -62,8 +62,8 @@ export default async function Person({ params: { id } }:{ params: {id: string}})
         <h4>Financial Assets:</h4>
         <br />
         <ul className={styles.list}>
-          {data.financialAssets?.map(item => (
-            <li>
+          {data.financialAssets?.map((item, index)=> (
+            <li key={index}>
               Ticker: {item.ticker} <br />
               Shares: {item.numberOfShares} <br />
               SharePrice: {item.sharePrice} <br />
