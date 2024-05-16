@@ -24,8 +24,8 @@ export default async function Home() {
         <h1 className={styles.title}>Billionaires</h1>
         <div className={styles.container}>
           {data?.map(item => (
-             <Link href={`/person/${item.id}`}>
-              <article key={item.id} className={styles.item}>
+             <Link key={item.id} href={`/person/${item.id}`}>
+              <article className={styles.item}>
                 <div className={styles.img_box}>
                   <Image 
                     src={item.squareImage} 
